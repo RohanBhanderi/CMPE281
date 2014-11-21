@@ -1,0 +1,12 @@
+{
+  "name": "GMNodeClient",
+  "version": "0.0.0",
+  "description": "Node JS Rest client for Gumball Machine REST API deployed on cloud foundry.",
+  "main": "server.js",
+  "repository": "",
+  "author": "Rohan Bhanderi <rohan.bhanderi@sjsu.edu>",
+  "dependencies": {
+    "express": "~3.2.4",
+    "node-rest-client": "^1.4.1"
+  }
+}
