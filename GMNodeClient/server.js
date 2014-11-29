@@ -2,7 +2,8 @@
 //  OpenShift sample Node application
 var express = require('express');
 var fs      = require('fs');
-
+var RestClient = require('node-rest-client').Client;
+var restClient = new RestClient();
 
 /**
  *  Define the sample application.
@@ -113,7 +114,7 @@ var SampleApp = function() {
      */
     self.initializeServer = function() {
         self.createRoutes();
-        self.app = express.createServer();
+        self.app = express();
 
         //  Add handlers for the app (from the routes).
         for (var r in self.routes) {
