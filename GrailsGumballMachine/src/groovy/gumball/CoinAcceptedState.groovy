@@ -2,7 +2,7 @@ package gumball
 
 class CoinAcceptedState implements IGumballState {
 	
-	def GumballMachine context ;
+	def GumballMachine context;
 
 	def CoinAcceptedState(GumballMachine m) {
 		context = m
