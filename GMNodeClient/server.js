@@ -2,6 +2,8 @@
 //  OpenShift sample Node application
 var express = require('express');
 var fs      = require('fs');
+
+// REST Client
 var RestClient = require('node-rest-client').Client;
 var restClient = new RestClient();
 
@@ -104,6 +106,24 @@ var SampleApp = function() {
         self.routes['/'] = function(req, res) {
             res.setHeader('Content-Type', 'text/html');
             res.send(self.cache_get('index.html') );
+        };
+        
+        self.routes['/test'] = function(req,res){
+            var count = "";
+            restClient.get("http://grails-gumball-machine.cfapps.io/gumball", function(data, response_raw){
+                // parsed response body as js object
+                console.log("DATA : " + data);
+                // raw response
+                console.log("response_raw:" + response_raw);
+                //console.log(data[0].id) ;
+                console.log(data[0].countGumballs) ;
+                console.log(data[0].modelNumber) ;
+                console.log(data[0].serialNumber) ;
+                count =  data[0].countGumballs ;
+                console.log(count) ;
+                res.writeHead(200, { 'Content-Type': 'text/plain' });
+                res.end('Hello REST Client! Count Gumballs ==> ' + count );
+            });
         };
     };
 
