@@ -24,9 +24,10 @@
   },
   "dependencies": {
     "body-parser": "^1.9.3",
+    "crypto": "0.0.3",
+    "ejs": "1.0.0",
     "express": "~3.4.4",
-    "node-rest-client": "^1.4.1",
-    "ejs":"1.0.0"
+    "node-rest-client": "^1.4.1"
   },
   "devDependencies": {},
   "bundleDependencies": [],

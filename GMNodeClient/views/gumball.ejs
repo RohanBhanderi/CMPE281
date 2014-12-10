@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Welcome to the Gumball Machine (New NodeJS Version)</title>
+    <title>Welcome to the Gumball Machine (NodeJS client)</title>
 </head>
 
 <body>
@@ -11,14 +11,14 @@
     <input type="hidden" name="state" id="state" value="<%=state%>" />
     <input type="hidden" name="model" id="model" value="<%=model%>" />
     <input type="hidden" name="serial" id="serial" value="<%=serial%>" />
-
+    <input type="hidden" name="ts" id="ts" value="<%=ts%>" />
+    <input type="hidden" name="hash" id="hash" value="<%=hash%>" />
+    
     <p>
-    <div align="center">
-        <textarea name="message" cols="50" rows="15" readonly id="message">
-            <%=msg%>
-        </textarea>
-    </div>
-</p>
+        <div align="center">
+            <textarea name="message" cols="50" rows="15" readonly id="message"><%=msg%></textarea>
+        </div>
+    </p>
     <p align="center"><img src="/images/giant-gumball-machine.jpg"  width="385" height="316"></p>
 
     <p align="center">
